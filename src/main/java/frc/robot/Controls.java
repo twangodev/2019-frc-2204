@@ -9,9 +9,6 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 
-/**
- * Add your docs here.
- */
 public class Controls {
 
     private static Controls getControls = new Controls();
@@ -28,12 +25,12 @@ public class Controls {
         turnStick = new Joystick(2);
     }
 
-	public double getThrottle() {
-		return throttleStick.getY();
-	}
+    public double getThrottle() {
+	return throttleStick.getY();
+    }
 
-	public double getTurn() {
-		return turnStick.getY();
+    public double getTurn() {
+	return turnStick.getY();
     }
     
     public boolean driveShoot() {
@@ -52,12 +49,12 @@ public class Controls {
         return turnStick.getRawButton(2);
     }
 
-	public boolean isQuickTurn() {
-		return turnStick.getRawButton(1);
-	}
+    public boolean isQuickTurn() {
+	return turnStick.getRawButton(1);
+    }
 
-	public boolean getAimButton() {
-		return throttleStick.getRawButton(1);
+    public boolean getAimButton() {
+	return throttleStick.getRawButton(1);
     }
 
     public double assistJoystickHatch() {
@@ -72,17 +69,17 @@ public class Controls {
         return assistStick.getRawButton(5);
     }
 
-	public boolean assistIntake() {
-		return assistStick.getRawButton(1);
-	}
+    public boolean assistIntake() {
+	return assistStick.getRawButton(1);
+    }
 
-	public boolean assistReverseIntake() {
-		return assistStick.getRawButton(3);
+    public boolean assistReverseIntake() {
+	return assistStick.getRawButton(3);
     }
     
-	public boolean assistShoot() {
-		return assistStick.getRawButton(2);
-	}
+    public boolean assistShoot() {
+	return assistStick.getRawButton(2);
+    }
 
 
 }
