@@ -10,9 +10,9 @@ public class Hatch extends Subsystem {
 
   private static Hatch getHatch = new Hatch();
 
-	public static Hatch getInstance() {
-		return getHatch;
-	}
+  public static Hatch getInstance() {
+	return getHatch;
+  }
 
   private DoubleSolenoid hatchClamp;
   private DoubleSolenoid hatchClampTwo;
@@ -40,4 +40,5 @@ public class Hatch extends Subsystem {
   public void initDefaultCommand() {
 
   }
+	
 }
