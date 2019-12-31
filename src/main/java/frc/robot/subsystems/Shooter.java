@@ -5,46 +5,46 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Shooter extends Subsystem {
 
-  private static Shooter getShooter = new Shooter();
+    private static Shooter getShooter = new Shooter();
 
-  public static Shooter getInstance() {
-    return getShooter;
-  }
+    public static Shooter getInstance() {
+        return getShooter;
+    }
 
-  private VictorSP firstShooter, secondShooter;
+    private VictorSP firstShooter, secondShooter;
 
-  private Shooter() {
-    firstShooter = new VictorSP(2);
-    secondShooter = new VictorSP(3);
-  }
+    private Shooter() {
+        firstShooter = new VictorSP(2);
+        secondShooter = new VictorSP(3);
+    }
 
-  private static final double intakePower = 0.2;
-  private static final double shootPower = 0.55;
-  
-  private void shootAtSpeed(double speed) {
-    firstShooter.set(-speed);
-    secondShooter.set(-speed);
-  }
+    private static final double intakePower = 0.2;
+    private static final double shootPower = 0.55;
 
-  public void intakeBall() {
-    shootAtSpeed(0.15);
-  }
+    private void shootAtSpeed(double speed) {
+        firstShooter.set(-speed);
+        secondShooter.set(-speed);
+    }
 
-  public void shootBall() {
-    shootAtSpeed(shootPower);
-  }
+    public void intakeBall() {
+        shootAtSpeed(0.15);
+    }
 
-  public void reverseIntake() {
-    shootAtSpeed(-intakePower);
-  }
-  
-  public void notShooting() {
-    firstShooter.set(0.0);
-    secondShooter.set(0.0);
-  }
+    public void shootBall() {
+        shootAtSpeed(shootPower);
+    }
 
-  @Override
-  public void initDefaultCommand() {
+    public void reverseIntake() {
+        shootAtSpeed(-intakePower);
+    }
 
-  }
+    public void notShooting() {
+        firstShooter.set(0.0);
+        secondShooter.set(0.0);
+    }
+
+    @Override
+    public void initDefaultCommand() {
+
+    }
 }
