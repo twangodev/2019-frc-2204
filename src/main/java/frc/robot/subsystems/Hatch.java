@@ -15,7 +15,6 @@ public class Hatch extends Subsystem {
   }
 
   private DoubleSolenoid hatchClamp;
-  private DoubleSolenoid hatchClampTwo;
   private Compressor mCompressor;
   private DigitalInput limitSwitch;
 
