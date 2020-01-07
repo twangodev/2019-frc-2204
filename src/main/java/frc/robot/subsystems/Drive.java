@@ -28,7 +28,8 @@ public class Drive {
         differentialDrive = new DifferentialDrive(leftY, rightY);
     }
 
-
+    //https://www.desmos.com/calculator/uqohkls0zj, this is used to adjust the turn value to a curve
+    //instead of making it linear, [-1, 1]
     private double setSensitivity(double controlValue) {
         return Constants.curvatureSensitivityBalancer * Math.pow(controlValue, 3) +
             (1 - Constants.curvatureSensitivityBalancer) * controlValue;
